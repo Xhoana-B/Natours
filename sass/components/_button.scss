@@ -7,7 +7,7 @@
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
   }
-
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -20,7 +20,9 @@
     font-size: 1.6rem;
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     transform: translateY(-0.3rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
@@ -36,14 +38,14 @@
     }
   }
 
- &--green {
-        background-color: $color-primary;
-        color: $color-white;
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
 
-        &::after {
-            background-color: $color-primary;
-        }
+    &::after {
+      background-color: $color-primary;
     }
+  }
 
   &::after {
     content: "";
@@ -83,10 +85,7 @@
     transform: translateY(-2px);
   }
   &:vactive {
-     box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
     transform: translateY(0px);
   }
-
-
- 
 }
